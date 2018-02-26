@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+        <title>Alien Documentation</title>
+
+        <link rel="stylesheet" href="../assets/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/alien.min.css">
+        <link rel="stylesheet" href="../assets/css/doc.css">
+        <link rel="stylesheet" href="../assets/plugins/github.css">
+		<script src="../assets/plugins/highlight.pack.min.js"></script>
+		<script>
+		    hljs.initHighlightingOnLoad();
+		</script>
+    </head>
+    <body>
+
+        <div class="Doc">
+
+            <!--header -->
+            <header class="Doc-header bg-primary--gradient">
+                <div class="container">
+                    <a href="/" class="">
+                        <span class="logo"><img src="../imgs/logo-light.png" alt=""/></span>
+                    </a>
+                </div>
+            </header>
+            <!--/ header -->
+
+            <!--body -->
+            <div class="container">
+
+                <!--sidebar -->
+                <div class="Doc-sidebar">
+                    <div class="Doc-sidebar__inner js-NiceScroll">
+                        <ul class="nav">
+                            <li>
+                                <h6>Introduction</h6>
+                                <ul class="nav">
+                                    <li><a href="../index.html">Getting Started</a></li>
+                                    <li><a href="intro-sass.html">Sass</a></li>
+                                    <li><a href="intro-gulp.html">Gulp</a></li>
+                                    <li><a href="intro-vendors.html">Vendors</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Features</h6>
+                                <ul class="nav">
+                                    <li><a href="feature-fonts.html">Fonts</a></li>
+                                    <li><a href="feature-navbar.html">Navbar</a></li>
+                                    <li><a href="feature-slider.html">Slider</a></li>
+                                    <li><a href="feature-parallax.html">Parallax</a></li>
+                                    <li><a href="feature-contact.html">Contact</a></li>
+                                    <li class="active"><a href="feature-map.html">Map</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Portfolio</h6>
+                                <ul class="nav">
+                                    <li><a href="portfolio-masonry.html">Masonry</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li>
+                                <h6>Shortcodes</h6>
+                                <ul class="nav">
+                                    <li><span class="label bg-primary">Coming soon</span></li>
+                                </ul>
+                            </li> -->
+                            <li>
+                                <h6>Extras</h6>
+                                <ul class="nav">
+                                    <!-- <li><a href="extras-faq.html">FAQ</a></li> -->
+                                    <li><a href="extras-updates.html">Updates</a></li>
+                                    <li><a href="extras-supports.html">Supports</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ sidebar -->
+
+                <!--content -->
+                <div class="row">
+                    <div class="col-md-9 col-sm-8 col-md-offset-3 col-sm-offset-4">
+                        <div class="Doc-content">
+                            <section>
+                                <h2>Map</h2>
+                                <hr>
+                                <p>Please check code comment.</p>
+                                <br>
+<div class="highlight">
+<pre>
+<code><!--google map-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCVkU7YnGfown4_i_sm6X36HP2jWTv54&callback=initMap"> </script>
+
+<script>
+    function initMap() {
+        var location, map, marker;
+
+        // Set your location's latitude and longitude
+        location = {lat: 23.810332, lng: 90.41251809999994};
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: location,
+            zoom: 10,
+            scrollwheel:false
+        });
+        marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+    }
+</script></code></pre>
+</div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!--/ content -->
+
+            </div>
+            <!--/ body -->
+
+        </div>
+
+        <script src="../assets/plugins/jquery.min.js"></script>
+        <script src="../assets/plugins/bootstrap.min.js"></script>
+        <script src="../assets/plugins/jquery.nicescroll.min.js"></script>
+        <script src="../assets/js/doc.js"></script>
+
+    </body>
+</html>

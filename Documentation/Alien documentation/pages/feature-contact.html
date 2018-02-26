@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+        <title>Alien Documentation</title>
+
+        <link rel="stylesheet" href="../assets/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/alien.min.css">
+        <link rel="stylesheet" href="../assets/css/doc.css">
+        <link rel="stylesheet" href="../assets/plugins/github.css">
+		<script src="../assets/plugins/highlight.pack.min.js"></script>
+		<script>
+		    hljs.initHighlightingOnLoad();
+		</script>
+    </head>
+    <body>
+
+        <div class="Doc">
+
+            <!--header -->
+            <header class="Doc-header bg-primary--gradient">
+                <div class="container">
+                    <a href="/" class="">
+                        <span class="logo"><img src="../imgs/logo-light.png" alt=""/></span>
+                    </a>
+                </div>
+            </header>
+            <!--/ header -->
+
+            <!--body -->
+            <div class="container">
+
+                <!--sidebar -->
+                <div class="Doc-sidebar">
+                    <div class="Doc-sidebar__inner js-NiceScroll">
+                        <ul class="nav">
+                            <li>
+                                <h6>Introduction</h6>
+                                <ul class="nav">
+                                    <li><a href="../index.html">Getting Started</a></li>
+                                    <li><a href="intro-sass.html">Sass</a></li>
+                                    <li><a href="intro-gulp.html">Gulp</a></li>
+                                    <li><a href="intro-vendors.html">Vendors</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Features</h6>
+                                <ul class="nav">
+                                    <li><a href="feature-fonts.html">Fonts</a></li>
+                                    <li><a href="feature-navbar.html">Navbar</a></li>
+                                    <li><a href="feature-slider.html">Slider</a></li>
+                                    <li><a href="feature-parallax.html">Parallax</a></li>
+                                    <li class="active"><a href="feature-contact.html">Contact</a></li>
+                                    <li><a href="feature-map.html">Map</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Portfolio</h6>
+                                <ul class="nav">
+                                    <li><a href="portfolio-masonry.html">Masonry</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li>
+                                <h6>Shortcodes</h6>
+                                <ul class="nav">
+                                    <li><span class="label bg-primary">Coming soon</span></li>
+                                </ul>
+                            </li> -->
+                            <li>
+                                <h6>Extras</h6>
+                                <ul class="nav">
+                                    <!-- <li><a href="extras-faq.html">FAQ</a></li> -->
+                                    <li><a href="extras-updates.html">Updates</a></li>
+                                    <li><a href="extras-supports.html">Supports</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ sidebar -->
+
+                <!--content -->
+                <div class="row">
+                    <div class="col-md-9 col-sm-8 col-md-offset-3 col-sm-offset-4">
+                        <div class="Doc-content">
+                            <section>
+                                <h2>Contact</h2>
+                                <hr>
+                                <p>There are 3 contact form variations <code>contact-us-1.html</code>, <code>contact-us-2.html</code> and <code>contact-us-3.html</code>. It's really really simple to setup contact form. You'll find contact form configurations in <code>mailer/config.php</code> file. Open that config file in your favorite editor and change the values accoding to sample code given below.</p>
+                                <br>
+<div class="highlight">
+<pre>
+<code>return array(
+    /**
+     * Email settings
+     */
+    'mailer' => array(
+        'subject'    => 'Website Contact Form', // Email subject
+        'from_email' => 'from@example.com', // Dynamic address cause problem, so use any of your email address
+        'from_name'  => 'Jane Doe', // Sender name
+        'to_email'   => 'to@example.com', // Recipient email address
+        'to_name'    => '' // Optional
+        ),
+
+    /**
+     * Fields map
+     */
+    'fields_map' => array(
+
+        /**
+         * Default contact form fields
+         */
+        'DEFAULT' => array(
+            'name'    => 'Name',
+            'email'   => 'Email',
+            'message' => 'Message',
+            ),
+
+        /**
+         * Contact form fields with phone number field
+         * FORM2 is its id
+         */
+        'FORM2' => array(
+            'name'    => 'Name',
+            'email'   => 'Email',
+            'message' => 'Message',
+            'phone'   => 'Phone Number'
+            ),
+        )
+    );</code></pre>
+</div>
+<br>
+<h3>Form Markup</h3>
+<div class="highlight">
+<pre>
+<code><form class="row js-ContactForm" method="post">
+    <div class="col-md-6">
+        <div class="form-group">
+            <!-- data-error="Inline validation error text" -->
+            <input type="text" class="form-control" placeholder="Name" name="name" data-error="You must enter name" required>
+            <div class="help-block with-errors"></div><!-- You must add/keep this for inline validation -->
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <!-- data-error="Inline validation error text" -->
+            <input type="email" class="form-control" placeholder="Email" name="email" data-error="Invalid email address" required>
+            <div class="help-block with-errors"></div><!-- You must add/keep this for inline validation -->
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <!-- data-error="Inline validation error text" -->
+            <textarea class="form-control" rows="4" placeholder="Message" name="message" data-error="You must enter message" required></textarea>
+            <div class="help-block with-errors"></div><!-- You must add/keep this for inline validation -->
+        </div>
+        <button type="submit" class="btn btn-gradient btn--alien btn-block">Send Message</button>
+    </div>
+</form></code>
+</pre>
+</div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!--/ content -->
+
+            </div>
+            <!--/ body -->
+
+        </div>
+
+        <script src="../assets/plugins/jquery.min.js"></script>
+        <script src="../assets/plugins/bootstrap.min.js"></script>
+        <script src="../assets/plugins/jquery.nicescroll.min.js"></script>
+        <script src="../assets/js/doc.js"></script>
+
+    </body>
+</html>

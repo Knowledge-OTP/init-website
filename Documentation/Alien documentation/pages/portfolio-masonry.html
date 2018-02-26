@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+        <title>Alien Documentation</title>
+
+        <link rel="stylesheet" href="../assets/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/alien.min.css">
+        <link rel="stylesheet" href="../assets/css/doc.css">
+        <link rel="stylesheet" href="../assets/plugins/github.css">
+		<script src="../assets/plugins/highlight.pack.min.js"></script>
+		<script>
+		    hljs.initHighlightingOnLoad();
+		</script>
+    </head>
+    <body>
+
+        <div class="Doc">
+
+            <!--header -->
+            <header class="Doc-header bg-primary--gradient">
+                <div class="container">
+                    <a href="/" class="">
+                        <span class="logo"><img src="../imgs/logo-light.png" alt=""/></span>
+                    </a>
+                </div>
+            </header>
+            <!--/ header -->
+
+            <!--body -->
+            <div class="container">
+
+                <!--sidebar -->
+                <div class="Doc-sidebar">
+                    <div class="Doc-sidebar__inner js-NiceScroll">
+                        <ul class="nav">
+                            <li>
+                                <h6>Introduction</h6>
+                                <ul class="nav">
+                                    <li><a href="../index.html">Getting Started</a></li>
+                                    <li><a href="intro-sass.html">Sass</a></li>
+                                    <li><a href="intro-gulp.html">Gulp</a></li>
+                                    <li><a href="intro-vendors.html">Vendors</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Features</h6>
+                                <ul class="nav">
+                                    <li><a href="feature-fonts.html">Fonts</a></li>
+                                    <li><a href="feature-navbar.html">Navbar</a></li>
+                                    <li><a href="feature-slider.html">Slider</a></li>
+                                    <li><a href="feature-parallax.html">Parallax</a></li>
+                                    <li><a href="feature-contact.html">Contact</a></li>
+                                    <li><a href="feature-map.html">Map</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Portfolio</h6>
+                                <ul class="nav">
+                                    <li class="active"><a href="portfolio-masonry.html">Masonry</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li>
+                                <h6>Shortcodes</h6>
+                                <ul class="nav">
+                                    <li><span class="label bg-primary">Coming soon</span></li>
+                                </ul>
+                            </li> -->
+                            <li>
+                                <h6>Extras</h6>
+                                <ul class="nav">
+                                    <!-- <li><a href="extras-faq.html">FAQ</a></li> -->
+                                    <li><a href="extras-updates.html">Updates</a></li>
+                                    <li><a href="extras-supports.html">Supports</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ sidebar -->
+
+                <!--content -->
+                <div class="row">
+                    <div class="col-md-9 col-sm-8 col-md-offset-3 col-sm-offset-4">
+                        <div class="Doc-content">
+                            <section>
+                                <h2>Masonry</h2>
+                                <hr>
+                                <p>We're using <a href="http://isotope.metafizzy.co/" target="_blank">Isotope</a> to for filterable masonry portfolio grid. There are enough grid and layout variations to fullfil your requirements. Just take any of Alien's portfolio demo and work on that, it's really simple.</p>
+                                <br>
+<div class="highlight">
+<pre>
+<code>
+<!--filter start-->
+<ul class="js-PortfolioFilter portfolio-filter text-center">
+    <li class="active"><a href="#" data-filter="*"> All</a></li>
+    <li><a href="#" data-filter=".cat1">printing</a></li>
+    <li><a href="#" data-filter=".cat2">Web</a></li>
+    <li><a href="#" data-filter=".cat3">illustration</a></li>
+    <li><a href="#" data-filter=".cat4">media</a></li>
+    <li><a href="#" data-filter=".cat5">crafts</a></li>
+</ul>
+<!--filter end-->
+
+<!--portfolio masonry start-->
+<div class="js-Portfolio portfolio-grid portfolio-masonry portfolio-gallery">
+
+    <!--item start-->
+    <div class="portfolio-item cat1 cat3 cat5">
+        <a href="imgs/portfolio/masonry/1.jpg" class="portfolio-image popup-gallery" title="Title">
+            <img src="imgs/portfolio/masonry/1.jpg" alt=""/>
+            <div class="portfolio-hover-title">
+                <div class="portfolio-content">
+                    <h4>Title</h4>
+                    <div class="portfolio-category">
+                        <span>Cat 1</span>
+                        <span>Cat 2</span>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--item end-->
+
+    <div class="portfolio-item cat3 cat4">
+        ...
+    </div>
+
+    <div class="portfolio-item cat1 cat5">
+        ...
+    </div>
+
+</div>
+<!--portfolio masonry end--></code></pre>
+</div>
+                                <br>
+                                <p>Default grid layout <code>grid-2</code>. You can change grid by changing class <code>grid-3</code>, <code>grid-4</code> or <code>grid-5</code>.</p>
+                                <br>
+<div class="highlight">
+<pre>
+<code><!--portfolio masonry start-->
+<div class="js-Portfolio portfolio-grid portfolio-masonry portfolio-gallery grid-2">
+    ...
+</div>
+<!--portfolio masonry end--></code></pre>
+
+                                <br>
+                                <p>In default, there is no gap between <code>.portfolio-item</code>. You can add gap between <code>.portfolio-item</code> by adding class <code>gutter</code> to parent class <code>.portfolio-grid</code>.</p>
+                                <br>
+<div class="highlight">
+<pre>
+<code><!--portfolio masonry start-->
+<div class="js-Portfolio portfolio-grid portfolio-masonry portfolio-gallery gutter">
+    ...
+</div>
+<!--portfolio masonry end--></code></pre>
+</div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!--/ content -->
+
+            </div>
+            <!--/ body -->
+
+        </div>
+
+        <script src="../assets/plugins/jquery.min.js"></script>
+        <script src="../assets/plugins/bootstrap.min.js"></script>
+        <script src="../assets/plugins/jquery.nicescroll.min.js"></script>
+        <script src="../assets/js/doc.js"></script>
+
+    </body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+        <title>Alien Documentation</title>
+
+        <link rel="stylesheet" href="../assets/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/alien.min.css">
+        <link rel="stylesheet" href="../assets/css/doc.css">
+        <link rel="stylesheet" href="../assets/plugins/github.css">
+		<script src="../assets/plugins/highlight.pack.min.js"></script>
+		<script>
+		    hljs.initHighlightingOnLoad();
+		</script>
+    </head>
+    <body>
+
+        <div class="Doc">
+
+            <!--header -->
+            <header class="Doc-header bg-primary--gradient">
+                <div class="container">
+                    <a href="/" class="">
+                        <span class="logo"><img src="../imgs/logo-light.png" alt=""/></span>
+                    </a>
+                </div>
+            </header>
+            <!--/ header -->
+
+            <!--body -->
+            <div class="container">
+
+                <!--sidebar -->
+                <div class="Doc-sidebar">
+                    <div class="Doc-sidebar__inner js-NiceScroll">
+                        <ul class="nav">
+                            <li>
+                                <h6>Introduction</h6>
+                                <ul class="nav">
+                                    <li><a href="../index.html">Getting Started</a></li>
+                                    <li><a href="intro-sass.html">Sass</a></li>
+                                    <li><a href="intro-gulp.html">Gulp</a></li>
+                                    <li class="active"><a href="intro-vendors.html">Vendors</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Features</h6>
+                                <ul class="nav">
+                                    <li><a href="feature-fonts.html">Fonts</a></li>
+                                    <li><a href="feature-navbar.html">Navbar</a></li>
+                                    <li><a href="feature-slider.html">Slider</a></li>
+                                    <li><a href="feature-parallax.html">Parallax</a></li>
+                                    <li><a href="feature-contact.html">Contact</a></li>
+                                    <li><a href="feature-map.html">Map</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Portfolio</h6>
+                                <ul class="nav">
+                                    <li><a href="portfolio-masonry.html">Masonry</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li>
+                                <h6>Shortcodes</h6>
+                                <ul class="nav">
+                                    <li><span class="label bg-primary">Coming soon</span></li>
+                                </ul>
+                            </li> -->
+                            <li>
+                                <h6>Extras</h6>
+                                <ul class="nav">
+                                    <!-- <li><a href="extras-faq.html">FAQ</a></li> -->
+                                    <li><a href="extras-updates.html">Updates</a></li>
+                                    <li><a href="extras-supports.html">Supports</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ sidebar -->
+
+                <!--content -->
+                <div class="row">
+                    <div class="col-md-9 col-sm-8 col-md-offset-3 col-sm-offset-4">
+                        <div class="Doc-content">
+                            <section>
+                                <h2>Vendors</h2>
+                                <hr>
+                                <p>In <code>assets/vendor/</code> folder, you can see the list of components that used in our templete.</p>
+                                <br>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Name
+                                                </th>
+                                                <th>
+                                                    Description
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>alien-icon</td>
+                                                <td>Custom line icon designed for alien templete.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>animate.css</td>
+                                                <td>Canvas to Blob is a polyfill for the standard JavaScript canvas.toBlob method. It can be used to create Blob objects from an HTML canvas element.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>bootsnav</td>
+                                                <td>Bootsnav is a multi purpose header based with Bootstrap, you can build any header style with bootsnav only with a few minutes.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>bootstrap</td>
+                                                <td>The most popular front-end framework for developing responsive, mobile first projects on the web.</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td>bootstrap-validator</td>
+                                                <td>A user-friendly HTML5 form validation jQuery plugin for Bootstrap 3.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>font-awesome</td>
+                                                <td>The iconic font and CSS toolkit</td>
+                                            </tr>
+                                            <tr>
+                                                <td>imagesloaded</td>
+                                                <td>JavaScript is all like "You images done yet or what?"</td>
+                                            </tr>
+                                            <tr>
+                                                <td>isotope</td>
+                                                <td>Filter & sort magical layouts</td>
+                                            </tr>
+                                            <tr>
+                                                <td>jquery</td>
+                                                <td>jQuery is a fast, small, and feature-rich JavaScript library.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>jquery.appear</td>
+                                                <td>jQuery plugin for tracking element's appearance in browser viewport.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>jquery.countTo</td>
+                                                <td>A jQuery plugin that will count up (or down) to a target number at a specified speed.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>magnific-popup</td>
+                                                <td>Magnific Popup is a responsive lightbox & dialog script with focus on performance and providing best experience for user with any device (for jQuery or Zepto.js).</td>
+                                            </tr>
+                                            <tr>
+                                                <td>owl.carousel2</td>
+                                                <td>desc</td>
+                                            </tr>
+                                            <tr>
+                                                <td>parallax.js</td>
+                                                <td>Parallax.js is a dirt simple parallax scrolling effect inspired by Spotify.com and implemented as a jQuery plugin.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>swiper</td>
+                                                <td>Most modern mobile touch slider with hardware accelerated transitions.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>switchery</td>
+                                                <td>Switchery is a simple component that helps you turn your default HTML checkbox inputs into beautiful iOS 7 style switches in just few simple steps. You can easily customize switches, so that they match your design perfectly.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>waypoints</td>
+                                                <td>Waypoints is a library that makes it easy to execute a function whenever you scroll to an element.</td>
+                                            </tr>
+                                        <tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!--/ content -->
+
+            </div>
+            <!--/ body -->
+
+        </div>
+
+        <script src="../assets/plugins/jquery.min.js"></script>
+        <script src="../assets/plugins/bootstrap.min.js"></script>
+        <script src="../assets/plugins/jquery.nicescroll.min.js"></script>
+        <script src="../assets/js/doc.js"></script>
+
+    </body>
+</html>

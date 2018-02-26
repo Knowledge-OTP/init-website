@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+        <title>Alien Documentation</title>
+
+        <link rel="stylesheet" href="../assets/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/alien.min.css">
+        <link rel="stylesheet" href="../assets/css/doc.css">
+        <link rel="stylesheet" href="../assets/plugins/github.css">
+		<script src="../assets/plugins/highlight.pack.min.js"></script>
+		<script>
+		    hljs.initHighlightingOnLoad();
+		</script>
+    </head>
+    <body>
+
+        <div class="Doc">
+
+            <!--header -->
+            <header class="Doc-header bg-primary--gradient">
+                <div class="container">
+                    <a href="/" class="">
+                        <span class="logo"><img src="../imgs/logo-light.png" alt=""/></span>
+                    </a>
+                </div>
+            </header>
+            <!--/ header -->
+
+            <!--body -->
+            <div class="container">
+
+                <!--sidebar -->
+                <div class="Doc-sidebar">
+                    <div class="Doc-sidebar__inner js-NiceScroll">
+                        <ul class="nav">
+                            <li>
+                                <h6>Introduction</h6>
+                                <ul class="nav">
+                                    <li><a href="../index.html">Getting Started</a></li>
+                                    <li><a href="intro-sass.html">Sass</a></li>
+                                    <li class="active"><a href="intro-gulp.html">Gulp</a></li>
+                                    <li><a href="intro-vendors.html">Vendors</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Features</h6>
+                                <ul class="nav">
+                                    <li><a href="feature-fonts.html">Fonts</a></li>
+                                    <li><a href="feature-navbar.html">Navbar</a></li>
+                                    <li><a href="feature-slider.html">Slider</a></li>
+                                    <li><a href="feature-parallax.html">Parallax</a></li>
+                                    <li><a href="feature-contact.html">Contact</a></li>
+                                    <li><a href="feature-map.html">Map</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Portfolio</h6>
+                                <ul class="nav">
+                                    <li><a href="portfolio-masonry.html">Masonry</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li>
+                                <h6>Shortcodes</h6>
+                                <ul class="nav">
+                                    <li><span class="label bg-primary">Coming soon</span></li>
+                                </ul>
+                            </li> -->
+                            <li>
+                                <h6>Extras</h6>
+                                <ul class="nav">
+                                    <!-- <li><a href="extras-faq.html">FAQ</a></li> -->
+                                    <li><a href="extras-updates.html">Updates</a></li>
+                                    <li><a href="extras-supports.html">Supports</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ sidebar -->
+
+                <!--content -->
+                <div class="row">
+                    <div class="col-md-9 col-sm-8 col-md-offset-3 col-sm-offset-4">
+                        <div class="Doc-content">
+                            <section>
+                                <h2>Gulp</h2>
+                                <hr>
+                                <p>gulp is a toolkit for automating painful or time-consuming tasks in your development workflow, so you can stop messing around and build something.</p>
+
+                                <h3><br>Installing Gulp</h3>
+                                <p>In order to utilize <a href="http://gulpjs.com/" target="_blank">Gulp</a> you will need to have installed <a href="https://nodejs.org/" target="_blank">Node.js</a> on your computer. Also insure that you have <a href="https://www.npmjs.org" target="_blank">NPM</a> (node packaged modules) installed. </p>
+                                <p>Run the following commands</p>
+                                <ul>
+                                    <li>Install <code>gulp</code> globally by running the command <code>npm install -g gulp</code></li>
+                                    <li>Navigate to the root directory of your project, then run <code>npm install</code>. </li>
+                                </ul>
+                                <p><br>Once you have succesfully setup now you can use bootkit Gulp CLI commands to automate your task.</p>
+
+                                <h3><br>Commands</h3>
+                                <h4><code>gulp build</code></h4>
+                                <p>This will automatically create <code>css/</code>and <code>js/</code> folder, and compile the SASS and JS files, and minify them as well.</p>
+                                <h4><code>gulp inject</code></h4>
+                                <p>Inject css and js paths in all html pages.</p>
+
+                                <h4><code>gulp watch</code></h4>
+                                <p>This will automaically compile the SASS and JS files, and minify them as well on save.</p>
+                                <h4><code>gulp serve</code></h4>
+                                <p>This will automaically connect to a local server <code>http://localhost:3000/</code> and open <code>index.html</code> page to your default browser. And will automaically compile the SASS, JS and .html files on save.</p>
+
+                                <h3><br>For Production</h3>
+                                <p></p>
+                                <h4><code>gulp plugins</code></h4>
+                                <p>This will automatically combine all <code>css/</code> files in <code>plugins.css</code> and <code>js/</code> files in <code>plugins.js</code></p>
+                                <h4><code>gulp injectPro</code></h4>
+                                <p>Inject <code>plugins.css</code> and <code>plugins.js</code> in all html pages.</p>
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!--/ content -->
+
+            </div>
+            <!--/ body -->
+
+        </div>
+
+        <script src="../assets/plugins/jquery.min.js"></script>
+        <script src="../assets/plugins/bootstrap.min.js"></script>
+        <script src="../assets/plugins/jquery.nicescroll.min.js"></script>
+        <script src="../assets/js/doc.js"></script>
+
+    </body>
+</html>

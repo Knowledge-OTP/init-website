@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+        <title>Alien Documentation</title>
+
+        <link rel="stylesheet" href="../assets/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/alien.min.css">
+        <link rel="stylesheet" href="../assets/css/doc.css">
+        <link rel="stylesheet" href="../assets/plugins/github.css">
+		<script src="../assets/plugins/highlight.pack.min.js"></script>
+		<script>
+		    hljs.initHighlightingOnLoad();
+		</script>
+    </head>
+    <body>
+
+        <div class="Doc">
+
+            <!--header -->
+            <header class="Doc-header bg-primary--gradient">
+                <div class="container">
+                    <a href="/" class="">
+                        <span class="logo"><img src="../imgs/logo-light.png" alt=""/></span>
+                    </a>
+                </div>
+            </header>
+            <!--/ header -->
+
+            <!--body -->
+            <div class="container">
+
+                <!--sidebar -->
+                <div class="Doc-sidebar">
+                    <div class="Doc-sidebar__inner js-NiceScroll">
+                        <ul class="nav">
+                            <li>
+                                <h6>Introduction</h6>
+                                <ul class="nav">
+                                    <li><a href="../index.html">Getting Started</a></li>
+                                    <li><a href="intro-sass.html">Sass</a></li>
+                                    <li><a href="intro-gulp.html">Gulp</a></li>
+                                    <li><a href="intro-vendors.html">Vendors</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Features</h6>
+                                <ul class="nav">
+                                    <li><a href="feature-fonts.html">Fonts</a></li>
+                                    <li><a href="feature-navbar.html">Navbar</a></li>
+                                    <li class="active"><a href="feature-slider.html">Slider</a></li>
+                                    <li><a href="feature-parallax.html">Parallax</a></li>
+                                    <li><a href="feature-contact.html">Contact</a></li>
+                                    <li><a href="feature-map.html">Map</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Portfolio</h6>
+                                <ul class="nav">
+                                    <li><a href="portfolio-masonry.html">Masonry</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li>
+                                <h6>Shortcodes</h6>
+                                <ul class="nav">
+                                    <li><span class="label bg-primary">Coming soon</span></li>
+                                </ul>
+                            </li> -->
+                            <li>
+                                <h6>Extras</h6>
+                                <ul class="nav">
+                                    <!-- <li><a href="extras-faq.html">FAQ</a></li> -->
+                                    <li><a href="extras-updates.html">Updates</a></li>
+                                    <li><a href="extras-supports.html">Supports</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ sidebar -->
+
+                <!--content -->
+                <div class="row">
+                    <div class="col-md-9 col-sm-8 col-md-offset-3 col-sm-offset-4">
+                        <div class="Doc-content">
+                            <section>
+                                <h2>Slider</h2>
+                                <hr>
+                                <p><a href="http://idangero.us/swiper/" target="_blank">Swiper Slider</a> is most modern mobile touch slider with hardware accelerated transitions and amazing native behavior. We've customized it so that you can take advantage of the great <a href="https://daneden.github.io/animate.css/" target="_blank">Animate.css</a> animation libray. Creating a slider in Alien is really simple task. Just take a slider demo (that suits your need) and replace demo content with your content, that's it!</p>
+                                <br>
+<div class="highlight">
+<pre>
+<code><!--slider start-->
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <!-- There are two color schemes, data-scheme="light" and data-scheme="dark" -->
+        <section class="swiper-slide ImageBackground" data-scheme="light" data-swiper-autoplay="200">
+            <div class="ImageBackground__holder">
+                <img src="imgs/swiper-slider/c0.jpg" alt="...">
+            </div>
+            <!-- You can use any animation from the great Animate.css library [link above] -->
+            <div class="container" data-animation="fadeIn">
+                ...
+                content here
+            </div>
+        </section>
+        <section class="swiper-slide" data-scheme="light" data-swiper-autoplay="200">
+            ...
+        </section>
+        <section class="swiper-slide" data-scheme="light" data-swiper-autoplay="200">
+            ...
+        </section>
+    </div>
+    <!-- Add Arrows -->
+    <div class="swiper-control swiper-button-next"></div>
+    <div class="swiper-control swiper-button-prev"></div>
+</div>
+<!--slider end--></code></pre>
+</div>
+
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!--/ content -->
+
+            </div>
+            <!--/ body -->
+
+        </div>
+
+        <script src="../assets/plugins/jquery.min.js"></script>
+        <script src="../assets/plugins/bootstrap.min.js"></script>
+        <script src="../assets/plugins/jquery.nicescroll.min.js"></script>
+        <script src="../assets/js/doc.js"></script>
+
+    </body>
+</html>

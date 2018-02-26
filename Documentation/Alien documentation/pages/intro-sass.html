@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="imgs/favicon.png" />
+        <title>Alien Documentation</title>
+
+        <link rel="stylesheet" href="../assets/plugins/bootstrap.min.css">
+        <link rel="stylesheet" href="../assets/css/alien.min.css">
+        <link rel="stylesheet" href="../assets/css/doc.css">
+        <link rel="stylesheet" href="../assets/plugins/github.css">
+		<script src="../assets/plugins/highlight.pack.min.js"></script>
+		<script>
+		    hljs.initHighlightingOnLoad();
+		</script>
+    </head>
+    <body>
+
+        <div class="Doc">
+
+            <!--header -->
+            <header class="Doc-header bg-primary--gradient">
+                <div class="container">
+                    <a href="/" class="">
+                        <span class="logo"><img src="../imgs/logo-light.png" alt=""/></span>
+                    </a>
+                </div>
+            </header>
+            <!--/ header -->
+
+            <!--body -->
+            <div class="container">
+
+                <!--sidebar -->
+                <div class="Doc-sidebar">
+                    <div class="Doc-sidebar__inner js-NiceScroll">
+                        <ul class="nav">
+                            <li>
+                                <h6>Introduction</h6>
+                                <ul class="nav">
+                                    <li><a href="../index.html">Getting Started</a></li>
+                                    <li class="active"><a href="intro-sass.html">Sass</a></li>
+                                    <li><a href="intro-gulp.html">Gulp</a></li>
+                                    <li><a href="intro-vendors.html">Vendors</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Features</h6>
+                                <ul class="nav">
+                                    <li><a href="feature-fonts.html">Fonts</a></li>
+                                    <li><a href="feature-navbar.html">Navbar</a></li>
+                                    <li><a href="feature-slider.html">Slider</a></li>
+                                    <li><a href="feature-parallax.html">Parallax</a></li>
+                                    <li><a href="feature-contact.html">Contact</a></li>
+                                    <li><a href="feature-map.html">Map</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h6>Portfolio</h6>
+                                <ul class="nav">
+                                    <li><a href="portfolio-masonry.html">Masonry</a></li>
+                                </ul>
+                            </li>
+                            <!-- <li>
+                                <h6>Shortcodes</h6>
+                                <ul class="nav">
+                                    <li><span class="label bg-primary">Coming soon</span></li>
+                                </ul>
+                            </li> -->
+                            <li>
+                                <h6>Extras</h6>
+                                <ul class="nav">
+                                    <!-- <li><a href="extras-faq.html">FAQ</a></li> -->
+                                    <li><a href="extras-updates.html">Updates</a></li>
+                                    <li><a href="extras-supports.html">Supports</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/ sidebar -->
+
+                <!--content -->
+                <div class="row">
+                    <div class="col-md-9 col-sm-8 col-md-offset-3 col-sm-offset-4">
+                        <div class="Doc-content">
+                            <section>
+                                <h2>Sass Structure</h2>
+                                <hr>
+                                <p>Sass is a CSS pre-processor, the most mature, stable, and powerful professional grade CSS extension language in the world; adding features that allow variables, mixins, functions. Bootkit supports Sass.</p>
+                                <p>Sass Files are found under <code>assets/build/sass</code></p>
+<div class="highlight">
+<pre>
+<code>sass
+│
+├── alien
+│   ├── components/
+│   ├── mixins/
+│   └── *.scss
+│
+└── alien.sass</code></pre>
+</div>
+                            </section>
+                            <section>
+                                <h3>Table of content</h3>
+<div class="highlight">
+<pre>
+<code>/**
+ * ==============================================
+ * Table of Content
+ * ==============================================
+ * 01 Reset
+ * 02 Typography
+ * 03 Bootsnav
+ * 04 Components
+ * -- 01 Buttons
+ * -- 02 Form
+ * -- 03 Heading
+ * -- 04 Blurb
+ * -- 05 Shortcode
+ * -- 06 Image Post
+ * -- 07 Media
+ * -- 08 Tabs
+ * -- 09 Clients
+ * -- 10 Alert
+ * -- 11 Steps
+ * -- 12 Panel
+ * -- 13 Progress
+ * -- 14 Socials
+ * -- 15 Breadcrumb
+ * -- 16 Owl Carousel
+ * -- 17 Contact
+ * -- 18 Login
+ * -- 19 Blog
+ * -- 20 Footer
+ * 05 Portfolio
+ * 06 Slider
+ * 07 Utilities
+ * ==============================================
+ */</code></pre>
+ </div>
+                            </section>
+                            <section>
+                                <h2>CSS Naming Convention</h2>
+                                <hr>
+                                <p>For underlying CSS in Alien we follow <a href="https://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">Harry Roberts</a>' style of block__element--modifier naming convention - or BEM.</p>
+                                <p>Find out more about BEM at <a href="https://en.bem.info/methodology/naming-convention/" target="_blank">bem.info</a>.</p>
+                            </section>
+                            <section>
+                                <h2>Utility Classes</h2>
+                                <hr>
+                                <br>
+
+                                <h3>Devices Media Query Size</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Device Name
+                                                </th>
+                                                <th>
+                                                    Size
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>laptop</td>
+                                                <td>max 1170px</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ipad</td>
+                                                <td>max 992px</td>
+                                            </tr>
+                                            <tr>
+                                                <td>mobile</td>
+                                                <td>max 768px</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <h3>Font Size</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Class Name
+                                                </th>
+                                                <th>
+                                                    Size
+                                                </th>
+                                                <th>
+                                                    Device
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.u-FontSize50</td>
+                                                <td>50px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-FontSize60</td>
+                                                <td>60px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-FontSize75</td>
+                                                <td>75px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-FontSize100</td>
+                                                <td>100px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-FontSize12</td>
+                                                <td>12px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-FontSize16</td>
+                                                <td>16px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-FontSize20</td>
+                                                <td>20px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-FontSize30</td>
+                                                <td>30px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-FontSize40</td>
+                                                <td>40px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-FontSize50</td>
+                                                <td>50px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-FontSize60</td>
+                                                <td>60px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <h3>Font Weight</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Class Name
+                                                </th>
+                                                <th>
+                                                    Weight
+                                                </th>
+                                                <th>
+                                                    Device
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.u-Weight100</td>
+                                                <td>100</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Weight300</td>
+                                                <td>300</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Weight400</td>
+                                                <td>400</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Weight600</td>
+                                                <td>600</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Weight700</td>
+                                                <td>700</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Weight800</td>
+                                                <td>800</td>
+                                                <td>all</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <h3>Line Height</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Class Name
+                                                </th>
+                                                <th>
+                                                    Leading
+                                                </th>
+                                                <th>
+                                                    Device
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.u-LineHeight1</td>
+                                                <td>1</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-LineHeight1-5</td>
+                                                <td>1.5</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-LineHeight2</td>
+                                                <td>2</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-LineHeight3</td>
+                                                <td>2.6</td>
+                                                <td>all</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <h3>Letter Spacing</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Class Name
+                                                </th>
+                                                <th>
+                                                    Size
+                                                </th>
+                                                <th>
+                                                    Device
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.u-LetterSpacing1</td>
+                                                <td>1px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-LetterSpacing2</td>
+                                                <td>2px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-LetterSpacing3</td>
+                                                <td>3px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-LetterSpacing4</td>
+                                                <td>4px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-LetterSpacing6</td>
+                                                <td>6px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-LetterSpacing10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-LetterSpacing15</td>
+                                                <td>15px</td>
+                                                <td>all</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <h3>Margin</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Class Name
+                                                </th>
+                                                <th>
+                                                    Size
+                                                </th>
+                                                <th>
+                                                    Device
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.u-Margin0</td>
+                                                <td>0</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-Margin0</td>
+                                                <td>0</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr class="bg-primary--gradient">
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop0</td>
+                                                <td>0</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop5</td>
+                                                <td>5px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop15</td>
+                                                <td>15px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop20</td>
+                                                <td>20px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop25</td>
+                                                <td>25px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop30</td>
+                                                <td>30px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop35</td>
+                                                <td>35px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop40</td>
+                                                <td>40px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop45</td>
+                                                <td>45px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop50</td>
+                                                <td>50px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop55</td>
+                                                <td>55px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop60</td>
+                                                <td>60px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop65</td>
+                                                <td>65px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop70</td>
+                                                <td>70px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop75</td>
+                                                <td>75px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop80</td>
+                                                <td>80px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop85</td>
+                                                <td>85px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop90</td>
+                                                <td>90px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop95</td>
+                                                <td>95px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop100</td>
+                                                <td>100px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginTop150</td>
+                                                <td>150px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-MarginTop10</td>
+                                                <td>10px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginTop0</td>
+                                                <td>0</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginTop20</td>
+                                                <td>20px</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginTop30</td>
+                                                <td>30px</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginTop40</td>
+                                                <td>40px</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginTop50</td>
+                                                <td>50px</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginTop0</td>
+                                                <td>0</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginTop20</td>
+                                                <td>20px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginTop30</td>
+                                                <td>30px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginTop40</td>
+                                                <td>40px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginTop50</td>
+                                                <td>50px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginTop60</td>
+                                                <td>60px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr class="bg-primary--gradient">
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom0</td>
+                                                <td>0</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom5</td>
+                                                <td>5px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom15</td>
+                                                <td>15px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom20</td>
+                                                <td>20px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom25</td>
+                                                <td>25px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom30</td>
+                                                <td>30px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom35</td>
+                                                <td>35px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom40</td>
+                                                <td>40px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom45</td>
+                                                <td>45px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom50</td>
+                                                <td>50px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <!-- <tr>
+                                                <td>.u-MarginBottom55</td>
+                                                <td>55px</td>
+                                                <td>all</td>
+                                            </tr> -->
+                                            <tr>
+                                                <td>.u-MarginBottom60</td>
+                                                <td>60px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom65</td>
+                                                <td>65px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom70</td>
+                                                <td>70px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom75</td>
+                                                <td>75px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom80</td>
+                                                <td>80px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <!-- <tr>
+                                                <td>.u-MarginBottom85</td>
+                                                <td>85px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom90</td>
+                                                <td>90px</td>
+                                                <td>all</td>
+                                            </tr> -->
+                                            <tr>
+                                                <td>.u-MarginBottom95</td>
+                                                <td>95px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom100</td>
+                                                <td>100px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginBottom150</td>
+                                                <td>150px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginBottom0</td>
+                                                <td>0</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginBottom20</td>
+                                                <td>20px</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginBottom30</td>
+                                                <td>30px</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginBottom40</td>
+                                                <td>40px</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginBottom50</td>
+                                                <td>50px</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-MarginBottom60</td>
+                                                <td>60px</td>
+                                                <td>iPad</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginBottom0</td>
+                                                <td>0</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginBottom10</td>
+                                                <td>10px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginBottom20</td>
+                                                <td>20px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginBottom30</td>
+                                                <td>30px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginBottom40</td>
+                                                <td>40px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginBottom50</td>
+                                                <td>50px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr class="bg-primary--gradient">
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginLeft5</td>
+                                                <td>5px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginLeft10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr class="bg-primary--gradient">
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginRight5</td>
+                                                <td>5px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginRight10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginRight20</td>
+                                                <td>20px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginRight30</td>
+                                                <td>30px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-MarginRight0</td>
+                                                <td>0</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <h3>Padding</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Class Name
+                                                </th>
+                                                <th>
+                                                    Size
+                                                </th>
+                                                <th>
+                                                    Device
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.u-Padding0</td>
+                                                <td>0</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Padding5</td>
+                                                <td>5px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Padding10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Padding20</td>
+                                                <td>20px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Padding30</td>
+                                                <td>30px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Padding50</td>
+                                                <td>50px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Padding90</td>
+                                                <td>70px 90px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-Padding0</td>
+                                                <td>0</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-Padding35</td>
+                                                <td>35px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-Padding0</td>
+                                                <td>0</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-Padding15</td>
+                                                <td>15px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-Padding35</td>
+                                                <td>35px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-Padding0</td>
+                                                <td>0</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-Padding10</td>
+                                                <td>10px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-Padding35</td>
+                                                <td>35px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr class="bg-primary--gradient">
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop0</td>
+                                                <td>0</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop5</td>
+                                                <td>5px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop15</td>
+                                                <td>15px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop20</td>
+                                                <td>20px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop25</td>
+                                                <td>25px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop30</td>
+                                                <td>30px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop40</td>
+                                                <td>40px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop45</td>
+                                                <td>45px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop50</td>
+                                                <td>50px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop55</td>
+                                                <td>55px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop60</td>
+                                                <td>66px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop65</td>
+                                                <td>65px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop70</td>
+                                                <td>70px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop85</td>
+                                                <td>85px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop90</td>
+                                                <td>90px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop100</td>
+                                                <td>100px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingTop150</td>
+                                                <td>150px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingTop0</td>
+                                                <td>0</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingTop5</td>
+                                                <td>5px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingTop10</td>
+                                                <td>10px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingTop15</td>
+                                                <td>15px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingTop20</td>
+                                                <td>20px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingTop25</td>
+                                                <td>25px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingTop30</td>
+                                                <td>30px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingTop0</td>
+                                                <td>0</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingTop5</td>
+                                                <td>5px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingTop10</td>
+                                                <td>10px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingTop15</td>
+                                                <td>15px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingTop20</td>
+                                                <td>20px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingTop25</td>
+                                                <td>25px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingTop30</td>
+                                                <td>30px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingTop50</td>
+                                                <td>50px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingTop0</td>
+                                                <td>0</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingTop5</td>
+                                                <td>5px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingTop10</td>
+                                                <td>10px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingTop15</td>
+                                                <td>15px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingTop20</td>
+                                                <td>20px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingTop25</td>
+                                                <td>25px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingTop30</td>
+                                                <td>30px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingTop50</td>
+                                                <td>50px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr class="bg-primary--gradient">
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom0</td>
+                                                <td>0</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom5</td>
+                                                <td>5px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom20</td>
+                                                <td>20px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom30</td>
+                                                <td>30px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom40</td>
+                                                <td>40px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom45</td>
+                                                <td>45px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom55</td>
+                                                <td>55px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom60</td>
+                                                <td>66px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom65</td>
+                                                <td>65px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom70</td>
+                                                <td>70px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom80</td>
+                                                <td>80px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom90</td>
+                                                <td>90px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom100</td>
+                                                <td>100px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingBottom150</td>
+                                                <td>150px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingBottom0</td>
+                                                <td>0</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingBottom10</td>
+                                                <td>10px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingBottom20</td>
+                                                <td>20px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingBottom30</td>
+                                                <td>30px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingBottom0</td>
+                                                <td>0</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingBottom10</td>
+                                                <td>10px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingBottom20</td>
+                                                <td>20px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingBottom30</td>
+                                                <td>30px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingBottom0</td>
+                                                <td>0</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingBottom10</td>
+                                                <td>10px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingBottom20</td>
+                                                <td>20px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingBottom30</td>
+                                                <td>30px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingBottom35</td>
+                                                <td>35px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingBottom50</td>
+                                                <td>50px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr class="bg-primary--gradient">
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft5</td>
+                                                <td>5px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft15</td>
+                                                <td>15px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft20</td>
+                                                <td>20px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft30</td>
+                                                <td>30px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft40</td>
+                                                <td>40px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft45</td>
+                                                <td>45px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft50</td>
+                                                <td>50px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft80</td>
+                                                <td>80px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingLeft100</td>
+                                                <td>100px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingLeft10</td>
+                                                <td>10px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingLeft20</td>
+                                                <td>20px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingLeft30</td>
+                                                <td>30px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingLeft0</td>
+                                                <td>0</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingLeft5</td>
+                                                <td>5px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingLeft10</td>
+                                                <td>10px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingLeft20</td>
+                                                <td>20px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingLeft0</td>
+                                                <td>0</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingLeft15</td>
+                                                <td>15px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingLeft20</td>
+                                                <td>20px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr class="bg-primary--gradient">
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingRight5</td>
+                                                <td>5px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingRight10</td>
+                                                <td>10px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingRight15</td>
+                                                <td>15px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingRight20</td>
+                                                <td>20px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingRight30</td>
+                                                <td>30px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingRight40</td>
+                                                <td>40px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingRight45</td>
+                                                <td>45px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingRight50</td>
+                                                <td>50px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-PaddingRight100</td>
+                                                <td>100px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingRight10</td>
+                                                <td>10px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingRight20</td>
+                                                <td>20px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>md</code>-PaddingRight30</td>
+                                                <td>30px</td>
+                                                <td>laptop</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingRight0</td>
+                                                <td>0</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingRight5</td>
+                                                <td>5px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingRight10</td>
+                                                <td>10px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>sm</code>-PaddingRight20</td>
+                                                <td>20px</td>
+                                                <td>ipad</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingRight0</td>
+                                                <td>0</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingRight15</td>
+                                                <td>15px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-<code>xs</code>-PaddingRight20</td>
+                                                <td>20px</td>
+                                                <td>mobile</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <h3>Icon Font Size</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Class Name
+                                                </th>
+                                                <th>
+                                                    Size
+                                                </th>
+                                                <th>
+                                                    Device
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.Icon--18px</td>
+                                                <td>18px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.Icon--24px</td>
+                                                <td>24px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.Icon--32px</td>
+                                                <td>32px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.Icon--44px</td>
+                                                <td>44px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.Icon--50px</td>
+                                                <td>50px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.Icon--60px</td>
+                                                <td>60px</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.Icon--80px</td>
+                                                <td>80px</td>
+                                                <td>all</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <h3>Misc</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Class Name
+                                                </th>
+                                                <th>
+                                                    Desc
+                                                </th>
+                                                <th>
+                                                    Device
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.u-Center</td>
+                                                <td>Horizontally and vertically center any block level element.</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-MarginAuto</td>
+                                                <td>Horizontally center any block level element.</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-vCenter</td>
+                                                <td>Vertically center any block level element.</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-OverflowVisible</td>
+                                                <td>Visiable overflow</td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-BoxShadow40</td>
+                                                <td>This class will apply 40px box-shadow around the element. <br><code>box-shadow: 0 0 40px rgba(black, .1)</code></td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-BoxShadow100</td>
+                                                <td>This class will apply 100px box-shadow around the element. <br><code>box-shadow: 0 0 100px rgba(black, .1)</code></td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-Rounded</td>
+                                                <td>This class will apply <code>border-radius: 999px</code></td>
+                                                <td>all</td>
+                                            </tr>
+                                            <tr>
+                                                <td>.u-TextGradiennt</td>
+                                                <td>This class will add gredient effect in your text. Happy!</td>
+                                                <td>all</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <!-- <h3>Padding</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-condensed table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    Class Name
+                                                </th>
+                                                <th>
+                                                    Size
+                                                </th>
+                                                <th>
+                                                    Device
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>.u-Margin0</td>
+                                                <td>0</td>
+                                                <td>all</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br> -->
+
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <!--/ content -->
+
+            </div>
+            <!--/ body -->
+
+        </div>
+
+        <script src="../assets/plugins/jquery.min.js"></script>
+        <script src="../assets/plugins/bootstrap.min.js"></script>
+        <script src="../assets/plugins/jquery.nicescroll.min.js"></script>
+        <script src="../assets/js/doc.js"></script>
+
+    </body>
+</html>

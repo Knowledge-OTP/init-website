@@ -1,0 +1,78 @@
+===================================================================
+v 1.3 - 21 May 2017
+===================================================================
+
+New Added
+-------------------------------------------------------------------
+- PSD Files
+- Custom built parallax
+
+
+Updated 
+-------------------------------------------------------------------
+- Removed parallax.js jQuery plugin
+- JavaScript clenup and improvement
+
+
+
+
+
+===================================================================
+v 1.2 - 9 May 2017
+===================================================================
+
+New Added
+-------------------------------------------------------------------
+- Tab navigation for portfolio filter
+- New utility classes [check documentation]
+- New navigation style [transparent with white border]
+
+
+Changed/Updated 
+-------------------------------------------------------------------
+- Directory structure [check documentation]
+- Compatibility with new directory structure
+- Heading short-code
+
+
+Fixed
+-------------------------------------------------------------------
+- Banner text responsive issues
+- Responsive mobile nav
+- Fixed-layout issue
+
+
+
+
+
+===================================================================
+v 1.1 - 27 April 2017
+===================================================================
+
+New
+-------------------------------------------------------------------
+- Play button shortcode [large size]
+
+Update
+-------------------------------------------------------------------
+- Base font size 14px to 16px
+- Blurb shortcode 3 [heading level changed to h4]
+- Testimonial shortcode [markup changed]
+- mp-interior.html [markup updated]
+- Paragraph color change [p tag]
+
+Affected Files
+-------------------------------------------------------------------
+- All files containing testimonial shortcode
+- All files containing blurb shortcode 3
+- All files containing p tag
+- All files containing any content
+
+
+
+
+===================================================================
+v 1.0 - 26 April 2017
+===================================================================
+
+New Released
